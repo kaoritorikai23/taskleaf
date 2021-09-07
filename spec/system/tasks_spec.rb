@@ -7,9 +7,11 @@ describe 'タスク管理機能', type: :system do
     
     before do
         visit login_path
+#        binding.pry
         fill_in 'メールアドレス', with: login_user.email
-#        fill_in 'パスワード', with: login_user.password
-        fill_in 'session[password]', with: login_user.password
+        fill_in 'パスワード', with: login_user.password
+#        fill_in 'session[password]', with: login_user.password
+#        binding.pry
         click_button 'ログインする'
     end
 
